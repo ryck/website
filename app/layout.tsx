@@ -1,12 +1,12 @@
 import "./global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "next-themes";
 import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
+import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -56,7 +56,7 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto">
-        <ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system">
           <main
             id="skip"
             className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 text-lg"

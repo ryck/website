@@ -57,7 +57,7 @@ export default function Blog({ params }) {
   if (!post) {
     notFound();
   }
-  console.log(post);
+  // console.log(post);
   return (
     <section>
       <script

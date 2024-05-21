@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatDate, getBlogPosts } from "app/blog/utils";
+import { getBlogPosts } from "app/blog/utils";
 import { metadata } from "app/layout";
 import { format } from "date-fns";
 
