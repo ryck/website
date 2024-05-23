@@ -8,20 +8,29 @@ import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
 import { ThemeProvider } from "./components/theme-provider";
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Next.js Portfolio Starter",
-    template: "%s | Next.js Portfolio Starter",
+    template: "%s | Ricardo Gonzalez",
+    default: "Ricardo Gonzalez",
   },
-  description: "This is my portfolio.",
+  description: "A website by Ricardo Gonzalez.",
   openGraph: {
-    title: "My Portfolio",
-    description: "This is my portfolio.",
-    url: baseUrl,
-    siteName: "My Portfolio",
+    title: "Ricardo Gonzalez",
+    url: "https://ryck.xyz",
+    siteName: "Ricardo Gonzalez's website",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: `https://ryck.xyz/api/og?title=${encodeURIComponent(
+          "Ricardo Gonzalez's site"
+        )}`,
+        width: 1200,
+        height: 630,
+        alt: "Ricardo Gonzalez's site",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -29,9 +38,20 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "Ricardo Gonzalez",
+    card: "summary_large_image",
+    creator: "@ryck",
+  },
+  icons: {
+    shortcut: "/favicons/favicon.ico",
+    icon: "/favicons/favicon.ico",
+  },
+  alternates: {
+    types: {
+      "application/rss+xml": `${baseUrl}/rss`,
     },
   },
 };
@@ -55,7 +75,7 @@ export default function RootLayout({
         inter.className
       )}
     >
-      <body className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto">
+      <body className="antialiased max-w-5xl mx-4 mt-8 lg:mx-auto">
         <ThemeProvider attribute="class" defaultTheme="system">
           <main
             id="skip"

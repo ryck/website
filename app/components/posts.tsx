@@ -4,10 +4,14 @@ import { metadata } from "app/layout";
 import { format } from "date-fns";
 
 export function BlogPosts() {
-  let allBlogs = getBlogPosts();
+  const allBlogs = getBlogPosts();
+
+  // console.log(allBlogs.length);
 
   return (
     <div>
+      <h1>{allBlogs.length} articles found</h1>
+
       {allBlogs
         .sort((a, b) => {
           if (

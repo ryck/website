@@ -101,7 +101,7 @@ export default function Blog({ params }) {
           </p>
         )}
       </div>
-      <article className="prose">
+      <article className="prose lg:prose-lg dark:prose-invert">
         <CustomMDX source={post.content} />
       </article>
     </section>
