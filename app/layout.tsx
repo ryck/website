@@ -1,5 +1,4 @@
 import "./global.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
@@ -17,13 +16,13 @@ export const metadata = {
   description: "A website by Ricardo Gonzalez.",
   openGraph: {
     title: "Ricardo Gonzalez",
-    url: "https://ryck.xyz",
+    url: `${baseUrl}`,
     siteName: "Ricardo Gonzalez's website",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `https://ryck.xyz/api/og?title=${encodeURIComponent(
+        url: `${baseUrl}/og?title=${encodeURIComponent(
           "Ricardo Gonzalez's site"
         )}`,
         width: 1200,
@@ -46,8 +45,8 @@ export const metadata = {
     creator: "@ryck",
   },
   icons: {
-    shortcut: "/favicons/favicon.ico",
-    icon: "/favicons/favicon.ico",
+    shortcut: `${baseUrl}/favicons/favicon.ico`,
+    icon: `${baseUrl}/favicons/favicon.ico`,
   },
   alternates: {
     types: {
